@@ -1,0 +1,30 @@
+{% load static core_tags %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ page.effective_seo_title|default:"Молния-Клининг" }}{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}{{ page.seo_description|default:'Профессиональный клининг в Санкт-Петербурге и Ленинградской области.' }}{% endblock %}">
+  <link rel="canonical" href="{{ request.build_absolute_uri }}">
+  <link rel="sitemap" type="application/xml" href="{% url 'sitemap' %}">
+  {% if site_settings and site_settings.favicon %}
+    <link rel="icon" href="{{ site_settings.favicon.url }}">
+  {% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'project/site.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{{ body_class|default:'page' }}{% endblock %}">
+  {% include "includes/header.html" %}
+  {% block content %}{% endblock %}
+  {% include "includes/footer.html" %}
+  {% if site_settings and site_settings.metrika_code %}
+    {{ site_settings.metrika_code|safe }}
+  {% endif %}
+  <script src="{% static 'js/main.js' %}" defer></script>
+</body>
+</html>

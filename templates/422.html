@@ -1,0 +1,8 @@
+{% extends "error_base.html" %}
+
+{% block title %}Данные не обработаны | Молния-Клининг{% endblock %}
+{% block error_code %}422{% endblock %}
+{% block error_label %}Проблема с данными{% endblock %}
+{% block error_heading %}Не удалось обработать данные{% endblock %}
+{% block error_message %}Сервер получил запрос, но не смог корректно обработать его содержимое. Проверьте введенные данные и отправьте форму повторно.{% endblock %}
+{% block error_hint %}Если ошибка появилась после вставки текста в форму, попробуйте сократить сообщение и отправить еще раз.{% endblock %}

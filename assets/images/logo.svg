@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="206" height="52" viewBox="0 0 206 52" role="img" aria-label="Молния">
+  <g fill="#A2C62C" transform="skewX(-10)">
+    <text x="8" y="35" font-family="Arial Black, Geologica, Arial, sans-serif" font-size="31" font-weight="900" letter-spacing="-1.8">молния</text>
+    <path d="M8 31h13l-4 6H4l4-6Zm21-19h13l-7 11H22l7-11Zm37 19h13l-4 6H62l4-6Zm21-19h13l-7 11H80l7-11Z" opacity=".95"/>
+  </g>
+</svg>

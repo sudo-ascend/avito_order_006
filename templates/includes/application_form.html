@@ -1,0 +1,90 @@
+{% load core_tags %}
+<section class="contact-band" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-card contact-card--info">
+      <h2>Свяжитесь с нами</h2>
+      <p>Консультация и выезд специалиста бесплатно. Оценим объем работ и предложим удобное время выезда.</p>
+      <a class="contact-line contact-line--phone" href="{{ site_settings.phone|default:'+7 921 947 80 89'|tel_href }}">
+        {% render_icon "phone" %} {{ site_settings.phone|default:"+7 921 947 80 89" }}
+      </a>
+      <a class="contact-line" href="mailto:{{ site_settings.email|default:'molniya@profcleaning-comp.ru' }}">
+        {% render_icon "message" %} {{ site_settings.email|default:"molniya@profcleaning-comp.ru" }}
+      </a>
+      <span class="contact-line">
+        {% render_icon "home" %} {{ site_settings.address|default:"194017, г. Санкт-Петербург, пр-т Энгельса, д. 54" }}
+      </span>
+      <span class="contact-line">
+        {% render_icon "clock" %} {{ site_settings.work_time|default:"Работаем 24/7" }}
+      </span>
+    </div>
+
+    <form class="request-form" method="post" enctype="multipart/form-data" novalidate>
+      {% csrf_token %}
+      <h2>Оставьте заявку</h2>
+      <p>Мы перезвоним вам в течение 15 минут и подскажем, какая бригада подойдет под задачу.</p>
+
+      {% if messages %}
+        <div class="status-list">
+          {% for message in messages %}
+            <p class="status-list__item status-list__item--{{ message.tags|default:'info' }}">{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if form.non_field_errors %}
+        <div class="status-list">
+          {% for error in form.non_field_errors %}
+            <p class="status-list__item status-list__item--error">{{ error }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <label>
+        <span>{{ form.name.label }}</span>
+        {{ form.name }}
+        {% for error in form.name.errors %}
+          <small class="field-error">{{ error }}</small>
+        {% endfor %}
+      </label>
+
+      <label>
+        <span>{{ form.phone.label }}</span>
+        {{ form.phone }}
+        {% for error in form.phone.errors %}
+          <small class="field-error">{{ error }}</small>
+        {% endfor %}
+      </label>
+
+      <fieldset>
+        <legend>{{ form.service.label }}:</legend>
+        {% for radio in form.service %}
+          <label class="check-line">
+            {{ radio.tag }}
+            <span>{{ radio.choice_label }}</span>
+          </label>
+        {% endfor %}
+        {% for error in form.service.errors %}
+          <small class="field-error">{{ error }}</small>
+        {% endfor %}
+      </fieldset>
+
+      <label>
+        <span>{{ form.comment.label }}</span>
+        {{ form.comment }}
+        {% for error in form.comment.errors %}
+          <small class="field-error">{{ error }}</small>
+        {% endfor %}
+      </label>
+
+      <button class="btn btn--primary" type="submit">{{ page.cta_primary_text }} <span aria-hidden="true">→</span></button>
+    </form>
+
+    <div class="contact-card contact-card--bullets">
+      <div>{% render_icon "clock" %}<span>Работаем без выходных и праздников</span></div>
+      <div>{% render_icon "truck" %}<span>Срочный выезд по Санкт-Петербургу и области</span></div>
+      <div>{% render_icon "calculator" %}<span>Прозрачный расчет стоимости до начала работ</span></div>
+      <div>{% render_icon "shield" %}<span>Работаем по договору и акту выполненных работ</span></div>
+      <div>{% render_icon "user-check" %}<span>Опытные клинеры и профильные специалисты</span></div>
+    </div>
+  </div>
+</section>

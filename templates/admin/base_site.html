@@ -1,0 +1,19 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}Молния-Клининг | {{ block.super }}{% endblock %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'admin_custom/admin.css' %}">
+{% endblock %}
+
+{% block branding %}
+  <div class="custom-admin-brand">
+    <img src="{% static 'images/logo-mark.png' %}" alt="" width="42" height="26">
+    <div>
+      <strong>Молния-Клининг</strong>
+      <span>панель управления сайтом</span>
+    </div>
+  </div>
+{% endblock %}

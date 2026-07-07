@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% load core_tags %}
+
+{% block content %}
+<main>
+  <section class="service-hero">
+    {% if page.hero_image %}
+      <img
+        class="service-hero__bg"
+        src="{{ page.hero_image.url }}"
+        alt="{{ page.hero_image_alt|default:page.h1 }}"
+        width="1500"
+        height="820"
+      >
+    {% endif %}
+    <div class="container service-hero__inner">
+      <div class="service-hero__content">
+        {% if page.eyebrow %}
+          <p class="eyebrow">{{ page.eyebrow }}</p>
+        {% endif %}
+        <h1>{{ page.h1 }}</h1>
+        {% if page.subtitle %}
+          <p class="hero-lead">{{ page.subtitle }}</p>
+        {% endif %}
+        {% if page.hero_advantages_list %}
+          <div class="hero-stats">
+            {% for item in page.hero_advantages_list %}
+              <span>{% render_icon "check" %}{{ item }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <div class="button-row">
+          <a class="btn btn--primary" href="#contact">{{ page.cta_primary_text }} <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#contact">{{ page.cta_secondary_text }} <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <aside class="service-hero__panel">
+        {% if page.right_card_list %}
+          {% for item in page.right_card_list %}
+            <div>{% render_icon item.icon %}<span>{{ item.text }}</span></div>
+          {% endfor %}
+        {% else %}
+          <div>{% render_icon "spray" %}<span>Удаляем сложные загрязнения и строительную пыль</span></div>
+          <div>{% render_icon "truck" %}<span>Используем профессиональное оборудование и химию</span></div>
+          <div>{% render_icon "leaf" %}<span>Деликатно очищаем поверхности без разводов и царапин</span></div>
+          <div>{% render_icon "home" %}<span>Работаем быстро, аккуратно и по согласованному плану</span></div>
+          <div>{% render_icon "shield" %}<span>Даем гарантию качества и сопровождаем результат</span></div>
+        {% endif %}
+      </aside>
+    </div>
+  </section>
+
+  {% if page.services.all %}
+    <section class="section service-details" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ page.service_section_title }}</h2>
+        </div>
+        <div class="service-card-grid">
+          {% for service in page.services.all %}
+            <article class="service-card service-card--detail">
+              {% if service.image %}
+                <div class="service-card__media">
+                  <img src="{{ service.image.url }}" alt="{{ service.image_alt|default:service.title }}" width="720" height="420" loading="lazy">
+                </div>
+              {% endif %}
+              <div class="service-card__body">
+                <span class="service-card__icon">{% render_icon service.icon %}</span>
+                <h3>{{ service.title }}</h3>
+                {% if service.description %}
+                  <p>{{ service.description }}</p>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.feature_items_list %}
+    <section class="section mini-features">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ page.features_section_title }}</h2>
+        </div>
+        <div class="mini-feature-grid">
+          {% for item in page.feature_items_list %}
+            {% cycle "water" "spray" "leaf" "truck" "shield" as feature_icon silent %}
+            <article>
+              {% render_icon feature_icon %}
+              <h3>{{ item }}</h3>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.advantages.all %}
+    <section class="section" id="advantages">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ page.advantages_section_title }}</h2>
+        </div>
+        <div class="benefit-grid">
+          {% for advantage in page.advantages.all %}
+            <article class="benefit-card">
+              {% render_icon advantage.icon %}
+              <h3>{{ advantage.title }}</h3>
+              {% if advantage.description %}
+                <p>{{ advantage.description }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.work_examples.all %}
+    <section class="section works-section" id="works">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ page.work_examples_section_title }}</h2>
+        </div>
+        <div class="work-example-grid">
+          {% for example in page.work_examples.all %}
+            <article class="work-example-card">
+              <div class="work-example-pair">
+                {% if example.before_image %}
+                  <figure>
+                    <img src="{{ example.before_image.url }}" alt="{{ example.before_alt|default:'До уборки' }}" width="520" height="360" loading="lazy">
+                    <figcaption>До</figcaption>
+                  </figure>
+                {% endif %}
+                {% if example.after_image %}
+                  <figure>
+                    <img src="{{ example.after_image.url }}" alt="{{ example.after_alt|default:'После уборки' }}" width="520" height="360" loading="lazy">
+                    <figcaption>После</figcaption>
+                  </figure>
+                {% endif %}
+              </div>
+              {% if example.description %}
+                <p class="work-example-note">{{ example.description }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.steps.all %}
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ page.steps_section_title }}</h2>
+        </div>
+        <div class="process-line">
+          {% for step in page.steps.all %}
+            {% cycle "phone" "truck" "document" "spray" "shield" as step_icon silent %}
+            <article class="process-step">
+              <span class="process-step__num">{{ forloop.counter|stringformat:"02d" }}</span>
+              <div class="process-step__icon">{% render_icon step_icon %}</div>
+              <h3>{{ step.title }}</h3>
+              {% if step.description %}
+                <p>{{ step.description }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if page.equipment.all %}
+    <section class="section equipment-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ page.equipment_section_title }}</h2>
+        </div>
+        <div class="equipment-grid">
+          {% for item in page.equipment.all %}
+            <article class="equipment-card">
+              {% if item.image %}
+                <img src="{{ item.image.url }}" alt="{{ item.image_alt|default:item.title }}" width="520" height="360" loading="lazy">
+              {% endif %}
+              <h3>{{ item.title }}</h3>
+              {% if item.description %}
+                <p>{{ item.description }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="section guarantee-section" id="about">
+    <div class="container">
+      <div class="guarantee-card">
+        <div class="guarantee-card__seal">{% render_icon "shield" %}</div>
+        <div>
+          <h2>{{ page.guarantee_title }}</h2>
+          {% if page.guarantee_text %}
+            <p>{{ page.guarantee_text }}</p>
+          {% endif %}
+        </div>
+        <ul>
+          {% if page.guarantee_items_list %}
+            {% for item in page.guarantee_items_list %}
+              {% cycle "document" "calculator" "shield" "check" as guarantee_icon silent %}
+              <li>{% render_icon guarantee_icon %} {{ item }}</li>
+            {% endfor %}
+          {% else %}
+            <li>{% render_icon "document" %} Работаем по договору и фиксируем перечень услуг</li>
+            <li>{% render_icon "calculator" %} Согласовываем смету до начала работ без скрытых платежей</li>
+            <li>{% render_icon "shield" %} Контролируем качество и возвращаемся на доработку при необходимости</li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {% include "includes/application_form.html" %}
+</main>
+{% endblock %}

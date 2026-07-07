@@ -1,0 +1,65 @@
+{% load static core_tags %}
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="{% url 'home' %}" aria-label="МОЛНИЯ клининг">
+      {% if site_settings and site_settings.logo %}
+        <img src="{{ site_settings.logo.url }}" alt="МОЛНИЯ клининг" width="212" height="56">
+      {% else %}
+        <img class="logo__mark" src="{% static 'images/logo-mark.png' %}" width="70" height="44" alt="" aria-hidden="true">
+        <span class="logo__copy">
+          <img class="logo__wordmark" src="{% static 'images/logo-wordmark.png' %}" width="142" height="36" alt="МОЛНИЯ">
+          <span class="logo__caption">клининг</span>
+        </span>
+      {% endif %}
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <div class="nav__item nav__item--dropdown">
+        <a href="/#services">Услуги</a>
+        {% if nav_pages %}
+          <div class="nav__dropdown">
+            {% for nav_page in nav_pages %}
+              <a href="{{ nav_page.get_absolute_url }}">{{ nav_page.name }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      <a href="#advantages">Преимущества</a>
+      <a href="/#reviews">Отзывы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+
+    <a
+      class="header-phone"
+      href="{{ site_settings.phone|default:'+7 921 947 80 89'|tel_href }}"
+      aria-label="Позвонить {{ site_settings.phone|default:'+7 921 947 80 89' }}"
+    >
+      {% render_icon "phone" %}
+      <span>{{ site_settings.phone|default:"+7 921 947 80 89" }}</span>
+      <small>{{ site_settings.work_time|default:"Работаем 24/7" }}</small>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Открыть меню</span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu__inner">
+      <a href="/#services">Услуги</a>
+      {% if nav_pages %}
+        {% for nav_page in nav_pages %}
+          <a href="{{ nav_page.get_absolute_url }}">{{ nav_page.name }}</a>
+        {% endfor %}
+      {% endif %}
+      <a href="#advantages">Преимущества</a>
+      <a href="/#reviews">Отзывы</a>
+      <a href="#contact">Контакты</a>
+      <a class="mobile-menu__phone" href="{{ site_settings.phone|default:'+7 921 947 80 89'|tel_href }}">
+        {{ site_settings.phone|default:"+7 921 947 80 89" }}
+      </a>
+    </div>
+  </div>
+</header>

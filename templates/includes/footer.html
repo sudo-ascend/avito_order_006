@@ -1,0 +1,20 @@
+{% load static core_tags %}
+<footer class="footer">
+  <div class="container footer__inner footer__inner--extended">
+    <a class="logo" href="{% url 'home' %}" aria-label="МОЛНИЯ клининг">
+      <img class="logo__mark" src="{% static 'images/logo-mark.png' %}" width="70" height="44" alt="" aria-hidden="true">
+      <span class="logo__copy">
+        <img class="logo__wordmark" src="{% static 'images/logo-wordmark.png' %}" width="142" height="36" alt="МОЛНИЯ">
+        <span class="logo__caption">клининг</span>
+      </span>
+    </a>
+    <div class="footer-meta">
+      <a href="{{ site_settings.phone|default:'+7 921 947 80 89'|tel_href }}">{{ site_settings.phone|default:"+7 921 947 80 89" }}</a>
+      <a href="mailto:{{ site_settings.email|default:'molniya@profcleaning-comp.ru' }}">{{ site_settings.email|default:"molniya@profcleaning-comp.ru" }}</a>
+      <span>{{ site_settings.address|default:"194017, г. Санкт-Петербург, пр-т Энгельса, д. 54" }}</span>
+      <span>{{ site_settings.work_time|default:"Работаем 24/7" }}</span>
+      <span>{{ site_settings.policy_text|default:"Политика конфиденциальности предоставляется по запросу." }}</span>
+    </div>
+    <p>© {% now "Y" %} Молния-Клининг. Срочный клининг, промышленная мойка и уборка сложных объектов.</p>
+  </div>
+</footer>

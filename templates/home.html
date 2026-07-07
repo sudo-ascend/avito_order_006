@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Молния-Клининг{% endblock %}
+{% block meta_description %}Профессиональный клининг в Санкт-Петербурге: аварийная уборка, B2B-клининг, мойка окон и фасадов, сложные технические работы.{% endblock %}
+
+{% block content %}
+<main>
+  <section class="home-hero">
+    <div class="container">
+      <div class="home-hero__card">
+        <img
+          class="home-hero__image"
+          src="{% static 'images/home-hero.webp' %}"
+          alt="Промышленная мойка окон и фасадов"
+          width="1500"
+          height="760"
+        >
+        <div class="home-hero__content">
+          <h1>Профессиональный клининг для сложных объектов</h1>
+          <p>
+            Берём на себя аварийную уборку, очистку после пожара и потопа, B2B-клининг,
+            мойку окон и фасадов, а также специализированные работы по восстановлению помещений.
+          </p>
+          <div class="button-row">
+            <a class="btn btn--primary" href="#contact">Связаться с нами</a>
+            <a class="btn btn--ghost" href="#services">Смотреть услуги</a>
+          </div>
+        </div>
+        <aside class="home-hero__panel" aria-label="Ключевые преимущества">
+          <div><span>Работаем 24/7</span></div>
+          <div><span>Выезд по Санкт-Петербургу и области</span></div>
+          <div><span>Полный цикл: от очистки до восстановления</span></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Основные направления</h2>
+      </div>
+      <div class="service-card-grid service-card-grid--home">
+        {% for service_page in pages %}
+          <article class="service-card">
+            {% if service_page.hero_image %}
+              <div class="service-card__media service-card__media--shape">
+                <img
+                  src="{{ service_page.hero_image.url }}"
+                  alt="{{ service_page.hero_image_alt|default:service_page.name }}"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+            <div class="service-card__body">
+              <h3>{{ service_page.name }}</h3>
+              <p>{{ service_page.subtitle|truncatechars:180 }}</p>
+              <a class="card-link" href="{{ service_page.get_absolute_url }}">Подробнее</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section home-advantages" id="advantages">
+    <div class="container">
+      <div class="home-advantages__lead">
+        <h2>Работаем аккуратно, быстро и без лишней бюрократии</h2>
+      </div>
+      <div class="advantage-list">
+        <article class="advantage-row">
+          <h3>Срочный выезд</h3>
+          <p>Оперативно подключаем бригаду и подбираем нужное оборудование под задачу.</p>
+        </article>
+        <article class="advantage-row">
+          <h3>Профильные работы</h3>
+          <p>Закрываем как бытовые, так и технически сложные объекты с нестандартными загрязнениями.</p>
+        </article>
+        <article class="advantage-row">
+          <h3>Прозрачная смета</h3>
+          <p>До начала работ фиксируем объём, этапы и ожидаемый результат.</p>
+        </article>
+        <article class="advantage-row">
+          <h3>Один подрядчик</h3>
+          <p>Не нужно собирать отдельных исполнителей на уборку, мойку, сушку и восстановление.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Контакты</h2>
+      </div>
+      <div class="advantage-list">
+        <article class="advantage-row">
+          <h3>Телефон</h3>
+          <p><a href="{{ site_settings.phone_href|default:'tel:+79219478089' }}">{{ site_settings.phone|default:"+7 921 947 80 89" }}</a></p>
+        </article>
+        <article class="advantage-row">
+          <h3>Email</h3>
+          <p><a href="mailto:{{ site_settings.email|default:'molniya@profcleaning-comp.ru' }}">{{ site_settings.email|default:"molniya@profcleaning-comp.ru" }}</a></p>
+        </article>
+        <article class="advantage-row">
+          <h3>Адрес</h3>
+          <p>{{ site_settings.address|default:"Санкт-Петербург" }}</p>
+        </article>
+        <article class="advantage-row">
+          <h3>Режим работы</h3>
+          <p>{{ site_settings.work_time|default:"Работаем 24/7" }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

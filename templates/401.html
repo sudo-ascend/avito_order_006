@@ -1,0 +1,8 @@
+{% extends "error_base.html" %}
+
+{% block title %}Требуется авторизация | Молния-Клининг{% endblock %}
+{% block error_code %}401{% endblock %}
+{% block error_label %}Ограниченный доступ{% endblock %}
+{% block error_heading %}Требуется авторизация{% endblock %}
+{% block error_message %}Эта страница недоступна без подтверждения доступа. Вернитесь на сайт и начните нужное действие заново.{% endblock %}
+{% block error_hint %}Если ссылка пришла из служебного раздела, возможно, сессия уже завершилась.{% endblock %}

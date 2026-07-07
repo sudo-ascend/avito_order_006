@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load core_tags %}
+
+{% block body_class %}page page--plain page--error{% endblock %}
+
+{% block content %}
+<main class="error-shell">
+  <div class="container">
+    <section class="error-card" aria-labelledby="error-title">
+      <div class="error-card__badge">
+        <span class="error-card__code">{% block error_code %}500{% endblock %}</span>
+        <span class="error-card__label">{% block error_label %}Служебная страница{% endblock %}</span>
+      </div>
+      <h1 id="error-title">{% block error_heading %}Что-то пошло не так{% endblock %}</h1>
+      <p class="error-card__lead">{% block error_message %}Попробуйте вернуться на главную страницу и открыть нужный раздел заново.{% endblock %}</p>
+      <p class="error-card__hint">{% block error_hint %}Если ситуация повторяется, свяжитесь с нами любым удобным способом.{% endblock %}</p>
+      <div class="error-card__actions">
+        <a class="btn btn--primary" href="{% url 'home' %}">На главную</a>
+        <a class="btn btn--ghost" href="/#services">Все услуги</a>
+      </div>
+      <div class="error-card__contacts">
+        <a href="{{ site_settings.phone|default:'+7 921 947 80 89'|tel_href }}">{{ site_settings.phone|default:"+7 921 947 80 89" }}</a>
+        <a href="mailto:{{ site_settings.email|default:'molniya@profcleaning-comp.ru' }}">{{ site_settings.email|default:"molniya@profcleaning-comp.ru" }}</a>
+      </div>
+    </section>
+  </div>
+</main>
+{% endblock %}

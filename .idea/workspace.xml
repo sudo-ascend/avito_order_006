@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8b423b32-fdaf-461b-9f7f-63dc72d05af2" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/avito_order_006.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/address.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/animate-circle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chaty-front.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cht-front-script.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css(1)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css(2)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day-care-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ekiticons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/elementor-icons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/elementor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fancybox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend(1).min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend(2).min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-modules.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/general.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/general.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/init_embed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/isotope-packery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/isotope.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-migrate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-modula.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery.inputmask.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/klining-pomeshhenij_2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lazysizes.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modula-fancybox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mojka-fasadov-i-okon_3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mojka-okon-2_1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ojKprzPQjz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/onion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/places.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/places_impl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-1412.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-97.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/purify.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_30wsttgtlgqsdzvfc1mchu5dhhmtzphnjwczvc4swzvskb3xhxt6jtau2fgms5c4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_ewwg0hvw9g0kpra8axk8zkcfkxrwar77xsycelggvvsbpzrcjjqrl7ubtx0rlpfi.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_f2iqfsk8hrgmqwu7hgf7d4lsarhed0udzyevtxuup4mizoinerknlofqpbpymzs1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_jtkz4mybdtgoeahjo4kneep0sjlirbymxqltixm9a1gnxypflismyudz6hx2jamh.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_kuwqdu8a6wk1msh5ohduiknhgzhg8pdqltajey4abd997aa5yke9fpnp8wiwqenw.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_lhg7zom0q8th5obftvouncu5dln1sgvrwziz0to3owdyq3jo254bnxlmjumjkcag.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_uw8yxd89tvi0mqbw3ucvop5mnhxvyg71rs77prylljtdzqwt7ykxzenrdh9hzjrl.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_wjykplawyqjassjfxaohis3mwjitjmtdmjxevfswqdo68zcqmv6disxlkx4ptpdu.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random-person_z5x9xezwpmww47oearjqsi2dw4cqh6odcgzvfa2lbkmxfuknbyztflupfjpidcur.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roboto.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/robotoslab.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_resource(1).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_resource(2).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_resource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_impl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit-spin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swiper.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swiper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/underscore.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(1)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(10)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(11)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(12)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(13)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(14)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(15)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(16)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(17)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(18)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(2)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(3)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(4)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(5)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(6)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(7)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(8)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vt(9)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.runtime.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsapp-image-2025-04-29-at-16.39.09_1_11zon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-divider.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-google_maps.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-heading.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-icon-box.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-icon-list.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-image-box.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-menu-anchor.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-star-rating.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget-styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widget.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-emoji-release.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-util.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpforms-base.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpforms.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Мойка окон и фасадов _ МОЛНИЯ-КЛИНИНГ.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sudo-ascend&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sudo-ascend/avito_order_006&quot;,
+    &quot;accountId&quot;: &quot;401355cb-961f-4455-9227-cfaa9b4736dd&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3G0JKbhvebqFcUnEfCpTYGdVqUC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-53e2683a6804-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.26094.141" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b423b32-fdaf-461b-9f7f-63dc72d05af2" name="Changes" comment="" />
+      <created>1783102489405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783102489405</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1783102582614</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783102582614</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+</project>
