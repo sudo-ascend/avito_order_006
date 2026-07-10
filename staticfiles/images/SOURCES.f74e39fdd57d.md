@@ -1,0 +1,76 @@
+# Image Sources
+
+- home-hero.webp, windows-hero.webp, gallery-facade-night.webp, gallery-glass-workers.webp: Local source file: static/images/source/unsplash-window-hero.jpg
+- windows-card.webp: Legacy local archive: avito_order_006-master/mojka-okon-2_1.webp
+- b2b-hero.webp, gallery-b2b.webp, b2b-floor.webp, equipment-floor-machine.webp: Unsplash: https://unsplash.com/photos/kLZs4yoR0uU
+- flood-hero.webp: Unsplash: https://unsplash.com/photos/wRfCMOcbMTw
+- flood-card.webp, gallery-flood.webp: Unsplash: https://unsplash.com/photos/ZNJFrCOCcKA
+- fire-hero.webp: Unsplash: https://unsplash.com/photos/RafVj10lx48
+- fire-card.webp, gallery-fire.webp: Unsplash: https://unsplash.com/photos/Kl-Lw0wZzqk
+- death-hero.webp: Unsplash: https://unsplash.com/photos/E1HSxmVG5lE
+- death-card.webp: Unsplash: https://unsplash.com/photos/Ld7ycsm59d0
+- renovation-hero.webp: Unsplash: https://unsplash.com/photos/7z8AHiYukiY
+- renovation-card.webp, gallery-renovation.webp: Unsplash: https://unsplash.com/photos/TcnHgP7Nf5I
+- hydro-hero.webp, equipment-pressure.webp: Unsplash: https://unsplash.com/photos/aUI8cOzgJ40
+- hydro-card.webp, gallery-graffiti.webp: Unsplash: https://unsplash.com/photos/U8f4nlz4HbA
+- equipment-generator.webp: Unsplash: https://unsplash.com/photos/VuR4oHZ3ucc
+- equipment-sprayer.webp: Unsplash: https://unsplash.com/photos/__ZMnefoI3k
+- equipment-ppe.webp: Unsplash: https://unsplash.com/photos/uQX2N8U-G3Q
+- equipment-vacuum.webp: Unsplash: https://unsplash.com/photos/CVcIMnH_7so
+- equipment-hose.webp: Unsplash: https://unsplash.com/photos/stRWZxXGDnE
+- equipment-chemistry.webp: Unsplash: https://unsplash.com/photos/9gzU1mtTzWM
+- documents-card.webp: Local source file: static/images/source/unsplash-documents.jpg
+- svc-flood-drying.webp: Cleanfax: practical application of airmovers
+- svc-flood-restore.webp: Operations Army: water-damaged room
+- svc-eq-dehumidifier.webp: Wikimedia Commons: rental dehumidifier
+- svc-eq-airmover.webp: Cleanfax: practical application of airmovers
+- svc-eq-wet-vacuum.webp: Wikimedia Commons: industrial wet dry vacuum
+- svc-eq-generator-mobile.webp: BNH Generators: mobile generator
+- svc-eq-meter-thermal.webp: TruTech Tools: FLIR moisture meter with thermal camera
+- svc-renovation-dust.webp: Unsplash CDN: construction debris search image 2
+- svc-repair-surface.webp: Unsplash CDN: commercial space near glass
+- svc-eq-floor-scrubber.webp: Wikimedia Commons: floor scrubber dryer
+- svc-b2b-hero.webp: Unsplash: commercial floor cleaning
+- svc-b2b-office.webp: Unsplash CDN: office vacuuming
+- svc-b2b-warehouse.webp: Unsplash CDN: corridor surface cleaning
+- svc-b2b-commercial.webp: Unsplash CDN: commercial space near glass
+- svc-b2b-once.webp: Unsplash CDN: close-up cleaning surface
+- svc-window-hero.webp: Unsplash CDN: rope access window cleaning
+- svc-window-rope.webp: Unsplash CDN: facade climbers on glass building
+- svc-window-lift.webp: Unsplash: workers on lift reflected in modern building facade
+- svc-window-wfp.webp: MonsterShop: water-fed backpack and pole
+- svc-window-hand.webp: Unsplash: man cleaning a storefront window with a squeegee
+- svc-window-alpinism.webp: Unsplash: window cleaner working on a tall building
+- svc-eq-wfp-backpack.webp: MonsterShop: water-fed backpack
+- svc-eq-wfp-system.webp: JRacenstein: water-fed pole system
+- svc-eq-window-kit.webp: Wikimedia Commons: window cleaning kit
+- svc-hydro-graffiti.webp: Docklands News: graffiti cleanup
+- svc-hydro-paint.webp: Ciudad Real: facade cleaning
+- svc-eq-pressure-washer.webp: Wikimedia Commons: pressure washer
+- svc-eq-ibc.webp: Wikimedia Commons: IBC tanks
+- svc-eq-diesel-generator.webp: Made-in-China: open type diesel generator
+- svc-eq-abrasive.webp: Wikimedia Commons: grit blasting
+- svc-eq-nozzle.webp: Century Hose: heavy duty spray nozzles
+- svc-flood-emergency.webp: User-provided local file: C:/Users/Alex/Downloads/Аварийный выезд и откачка воды.webp
+- svc-flood-disinfection.webp: User-provided local file: C:/Users/Alex/Downloads/Дезинфекция и обработка.webp
+- svc-flood-insurance.webp: User-provided local file: C:/Users/Alex/Downloads/Помощь со страховыми компаниями.webp
+- eq-flood-pumps.webp: User-provided local file: C:/Users/Alex/Downloads/Промышленные насосы для откачки.webp
+- svc-fire-soot.webp: User-provided local file: C:/Users/Alex/Downloads/Удаление копоти и гари.jpg
+- svc-fire-surface.webp: User-provided local file: C:/Users/Alex/Downloads/Очистка поверхностей и конструкций.webp
+- svc-fire-odor.webp: User-provided local file: C:/Users/Alex/Downloads/Устранение запахов.jpg
+- svc-fire-disposal.webp: User-provided local file: C:/Users/Alex/Downloads/Вывоз мусора и утилизация.webp
+- svc-fire-insurance.webp: User-provided local file: C:/Users/Alex/Downloads/Помощь со страховыми компаниями.jpg
+- eq-fire-ozone.webp, eq-death-ozone.webp: User-provided local file: C:/Users/Alex/Downloads/Озонаторы воздуха.webp
+- eq-fire-steamer.webp: User-provided local file: C:/Users/Alex/Downloads/Пароочистители высокой температуры.webp
+- svc-death-disinfect.webp: User-provided local file: C:/Users/Alex/Downloads/Дезинфекция помещений.webp
+- svc-death-bio.webp: User-provided local file: C:/Users/Alex/Downloads/Удаление биологических загрязнений.webp
+- svc-death-odor.webp: User-provided local file: C:/Users/Alex/Downloads/Устранение запахов.webp
+- svc-death-ozone.webp: User-provided local file: C:/Users/Alex/Downloads/Озонирование воздуха.webp
+- svc-death-disposal.webp: User-provided local file: C:/Users/Alex/Downloads/Вывоз зараженных материалов.webp
+- svc-death-restore.webp: User-provided local file: C:/Users/Alex/Downloads/Восстановление помещения.webp
+- eq-death-steamer.webp: User-provided local file: C:/Users/Alex/Downloads/Пароочистители.webp
+- svc-repair-window.webp: User-provided local file: C:/Users/Alex/Downloads/Мойка окон и остекления.webp
+- svc-repair-turnkey.webp: User-provided local file: C:/Users/Alex/Downloads/Уборка помещений под ключ.webp
+- svc-repair-debris.webp: User-provided local file: C:/Users/Alex/Downloads/Вывоз строительного мусора.webp
+- eq-repair-pressure.webp: User-provided local file: C:/Users/Alex/Downloads/Пароочистители высокого давления.webp
+- eq-repair-inventory.webp: User-provided local file: C:/Users/Alex/Downloads/Инвентарь премиум-класса.webp
