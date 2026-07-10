@@ -4,6 +4,14 @@
 {% block title %}Молния-Клининг | {{ block.super }}{% endblock %}
 
 {% block extrahead %}
+  <script>
+    document.documentElement.dataset.theme = "light";
+    try {
+      localStorage.setItem("theme", "light");
+    } catch (error) {
+      console.warn("Unable to persist admin theme preference.", error);
+    }
+  </script>
   {{ block.super }}
   <link rel="icon" href="{% static 'favicon.ico' %}?v=2" sizes="any">
 {% endblock %}
