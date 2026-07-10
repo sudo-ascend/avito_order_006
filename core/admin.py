@@ -4,7 +4,18 @@ from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils.html import format_html
 
-from core.models import Advantage, AdvantageGroup, Application, Equipment, Page, Service, SiteSettings, Step, WorkExample
+from core.models import (
+    Advantage,
+    AdvantageGroup,
+    Application,
+    Equipment,
+    Page,
+    Service,
+    SiteSettings,
+    Step,
+    TelegramSubscriber,
+    WorkExample,
+)
 
 admin.site.site_header = "Молния-Клининг"
 admin.site.site_title = "Молния-Клининг"
@@ -43,6 +54,10 @@ class PageAdmin(admin.ModelAdmin):
     search_fields = ("name", "slug", "h1", "seo_title")
     prepopulated_fields = {"slug": ("name",)}
     inlines = [ServiceInline, WorkExampleInline, StepInline, EquipmentInline]
+
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        return False
+
     fieldsets = (
         ("Основное", {"fields": ("name", "slug", "is_active", "h1", "eyebrow", "subtitle")}),
         ("SEO", {"fields": ("seo_title", "seo_description")}),
@@ -103,9 +118,12 @@ class SingletonAdmin(admin.ModelAdmin):
 @admin.register(SiteSettings)
 class SiteSettingsAdmin(SingletonAdmin):
     fieldsets = (
-        ("Контакты", {"fields": ("phone", "email", "application_email", "address", "work_time")}),
+        (
+            "Контакты",
+            {"fields": ("phone", "telegram_username", "whatsapp_phone", "email", "application_email", "address", "work_time")},
+        ),
         ("Брендинг", {"fields": ("logo", "favicon")}),
-        ("Интеграции", {"fields": ("telegram_chat_id", "metrika_code")}),
+        ("Интеграции", {"fields": ("metrika_code",)}),
         ("Дополнительно", {"fields": ("policy_text",)}),
     )
 
@@ -128,3 +146,14 @@ class AdvantageGroupAdmin(admin.ModelAdmin):
     list_display = ("name",)
     search_fields = ("name",)
     inlines = [AdvantageInline]
+
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        return False
+
+
+@admin.register(TelegramSubscriber)
+class TelegramSubscriberAdmin(admin.ModelAdmin):
+    list_display = ("chat_id", "username", "first_name", "last_name", "is_active", "subscribed_at", "updated_at")
+    list_filter = ("is_active", "subscribed_at", "updated_at")
+    search_fields = ("chat_id", "username", "first_name", "last_name")
+    readonly_fields = ("chat_id", "username", "first_name", "last_name", "subscribed_at", "updated_at")

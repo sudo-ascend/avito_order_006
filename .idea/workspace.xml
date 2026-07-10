@@ -4,131 +4,197 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b423b32-fdaf-461b-9f7f-63dc72d05af2" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/avito_order_006.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/address.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/animate-circle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chaty-front.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cht-front-script.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controls.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css(1)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css(2)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day-care-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekiticons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/elementor-icons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/elementor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fancybox.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fontawesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend(1).min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend(2).min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-modules.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/general.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/general.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geometry.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/init_embed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/isotope-packery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/isotope.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery-migrate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery-modula.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery.inputmask.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery.validate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/klining-pomeshhenij_2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lazysizes.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modula-fancybox.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mojka-fasadov-i-okon_3.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mojka-okon-2_1.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ojKprzPQjz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/onion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/places.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/places_impl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-1412.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-97.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/purify.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_30wsttgtlgqsdzvfc1mchu5dhhmtzphnjwczvc4swzvskb3xhxt6jtau2fgms5c4.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_ewwg0hvw9g0kpra8axk8zkcfkxrwar77xsycelggvvsbpzrcjjqrl7ubtx0rlpfi.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_f2iqfsk8hrgmqwu7hgf7d4lsarhed0udzyevtxuup4mizoinerknlofqpbpymzs1.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_jtkz4mybdtgoeahjo4kneep0sjlirbymxqltixm9a1gnxypflismyudz6hx2jamh.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_kuwqdu8a6wk1msh5ohduiknhgzhg8pdqltajey4abd997aa5yke9fpnp8wiwqenw.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_lhg7zom0q8th5obftvouncu5dln1sgvrwziz0to3owdyq3jo254bnxlmjumjkcag.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_uw8yxd89tvi0mqbw3ucvop5mnhxvyg71rs77prylljtdzqwt7ykxzenrdh9hzjrl.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_wjykplawyqjassjfxaohis3mwjitjmtdmjxevfswqdo68zcqmv6disxlkx4ptpdu.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random-person_z5x9xezwpmww47oearjqsi2dw4cqh6odcgzvfa2lbkmxfuknbyztflupfjpidcur.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/roboto.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robotoslab.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_resource(1).html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_resource(2).html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_resource.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_impl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shapes.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/submit-spin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swiper.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swiper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/underscore.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(1)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(10)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(11)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(12)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(13)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(14)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(15)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(16)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(17)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(18)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(2)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(3)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(4)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(5)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(6)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(7)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(8)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vt(9)" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.runtime.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsapp-image-2025-04-29-at-16.39.09_1_11zon.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-divider.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-google_maps.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-heading.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-icon-box.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-icon-list.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-image-box.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-image.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-menu-anchor.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-star-rating.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget-styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widget.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-emoji-release.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-util.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wpforms-base.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wpforms.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Мойка окон и фасадов _ МОЛНИЯ-КЛИНИНГ.html" beforeDir="false" />
+    <list default="true" id="8b423b32-fdaf-461b-9f7f-63dc72d05af2" name="Changes" comment="django initial">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/SOURCES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/b2b-floor.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/b2b-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/death-card.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/death-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/documents-card.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-death-chemistry.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-death-fogger.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-death-hepa.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-death-ozone.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-death-ppe.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-death-steamer.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-fire-chemistry.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-fire-fan.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-fire-fogger.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-fire-ozone.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-fire-steamer.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-fire-vacuum.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-flood-dryer.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-flood-generator.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-flood-heat.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-flood-meter.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-flood-pumps.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-flood-vacuum.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-hydro-abrasive.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-hydro-generator.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-hydro-hose.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-hydro-ppe.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-hydro-pressure.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-hydro-tank.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-repair-chemistry.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-repair-floor.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-repair-inventory.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-repair-pressure.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-repair-rotary.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-repair-vacuum.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-window-chemistry.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-window-lift.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-window-poles.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-window-pure-water.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/eq-window-ropes.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/equipment-chemistry.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/equipment-floor-machine.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/equipment-generator.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/equipment-hose.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/equipment-ppe.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/equipment-pressure.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/equipment-sprayer.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/equipment-vacuum.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/fire-card.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/fire-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/flood-card.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/flood-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gallery-b2b.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gallery-facade-night.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gallery-fire.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gallery-flood.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gallery-glass-workers.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gallery-graffiti.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gallery-renovation.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/home-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/hydro-card.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/hydro-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo-mark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo-wordmark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/renovation-card.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/renovation-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/old-b2b-floor.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/old-facade-night.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/old-facade-window.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/old-window-wash.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-b2b-cleaning.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-clean-room.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-cleaning-chemistry.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-disinfection-hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-disinfection-room.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-documents.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-fire-hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-fire-room.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-flood-hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-flood-room.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-generator.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-graffiti-wall.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-hose.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-office-vacuum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-pressure-wash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-protective-suit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-renovation-hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-renovation-room.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-rust-metal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-spray-bottle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/source/unsplash-window-hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-b2b-commercial.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-b2b-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-b2b-office.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-b2b-once.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-b2b-warehouse.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-death-bio.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-death-disinfect.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-death-disposal.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-death-odor.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-death-ozone.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-death-restore.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-abrasive.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-airmover.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-chemicals.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-dehumidifier.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-diesel-generator.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-floor-scrubber.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-generator-mobile.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-ibc.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-meter-thermal.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-nozzle.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-pressure-washer.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-wet-vacuum.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-wfp-backpack.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-wfp-system.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-eq-window-kit.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-fire-disposal.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-fire-insurance.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-fire-odor.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-fire-soot.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-fire-surface.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-flood-disinfection.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-flood-drying.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-flood-emergency.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-flood-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-flood-insurance.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-flood-pump.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-flood-restore.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-hydro-concrete.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-hydro-graffiti.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-hydro-paint.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-hydro-stone.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-renovation-debris.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-renovation-dust.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-renovation-turnkey.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-repair-debris.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-repair-dust.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-repair-surface.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-repair-turnkey.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-repair-window.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-window-alpinism.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-window-hand.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-window-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-window-lift.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-window-rope.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/svc-window-wfp.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/windows-card.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/windows-hero.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/context_processors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/default_pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/default_pages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/management/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/management/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/management/commands/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/management/commands/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/management/commands/sync_history_content.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/management/commands/sync_history_content.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0002_advantage_groups.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/migrations/0002_advantage_groups.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0003_remove_application_page_slug_application_page_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/migrations/0003_remove_application_page_slug_application_page_and_more.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/sitemaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/sitemaps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templatetags/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/templatetags/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templatetags/core_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/templatetags/core_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molnia_cleaning/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/molnia_cleaning/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/molnia_cleaning/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/molnia_cleaning/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/project/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/project/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/application_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/application_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/b2b-cleaning.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/b2b-cleaning.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/gidropeskostruynaya-ochistka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/gidropeskostruynaya-ochistka.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/myte-okon-i-fasadov.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/myte-okon-i-fasadov.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/uborka-posle-potopa.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/uborka-posle-potopa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/uborka-posle-pozhara.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/uborka-posle-pozhara.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/uborka-posle-remonta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/uborka-posle-remonta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/uborka-posle-smerti.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/uborka-posle-smerti.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +228,7 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
@@ -189,11 +256,20 @@
       <option name="project" value="LOCAL" />
       <updated>1783102582614</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="django initial">
+      <option name="closed" value="true" />
+      <created>1783455134158</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1783455134158</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="django initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="django initial" />
   </component>
 </project>

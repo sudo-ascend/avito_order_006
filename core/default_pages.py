@@ -33,10 +33,7 @@ def get_default_page_definition(slug: str) -> dict[str, Any] | None:
 
 
 def ensure_default_pages() -> None:
-    existing_slugs = set(Page.objects.filter(slug__in=default_pages_by_slug()).values_list("slug", flat=True))
     for slug in default_pages_by_slug():
-        if slug in existing_slugs:
-            continue
         ensure_default_page(slug)
 
 
@@ -49,8 +46,9 @@ def ensure_default_page(slug: str) -> Page | None:
 
     with transaction.atomic():
         page, created = Page.objects.get_or_create(slug=slug, defaults=page_defaults)
-        if not page.advantage_group_id:
-            page.advantage_group = _ensure_advantage_group(page, definition)
+        advantage_group = _ensure_advantage_group(page, definition)
+        if page.advantage_group_id != getattr(advantage_group, "pk", None):
+            page.advantage_group = advantage_group
             page.save(update_fields=["advantage_group"])
         if created:
             _populate_related_content(page, definition)
@@ -73,36 +71,32 @@ def _join_lines(value: Any) -> str:
     return str(value)
 
 
-def _normalized_advantage_items(items: list[dict[str, Any]]) -> tuple[tuple[str, str, str, int], ...]:
-    return tuple(
-        (
-            str(item.get("title") or "").strip(),
-            str(item.get("description") or "").strip(),
-            str(item.get("icon") or "check").strip(),
-            int(item.get("order") or 10),
-        )
-        for item in items
-    )
-
-
-def _group_signature(group: AdvantageGroup) -> tuple[tuple[str, str, str, int], ...]:
-    return tuple(
-        group.advantages.order_by("order", "pk").values_list("title", "description", "icon", "order")
-    )
-
-
 def _ensure_advantage_group(page: Page, definition: dict[str, Any]) -> AdvantageGroup | None:
     items = definition.get("advantages") or []
     if not items:
         return None
 
-    signature = _normalized_advantage_items(items)
-    for group in AdvantageGroup.objects.prefetch_related("advantages"):
-        if _group_signature(group) == signature:
-            return group
+    group_name = f"Преимущества: {page.name}"
 
-    group = AdvantageGroup.objects.create(name=f"Преимущества: {page.name}")
-    Advantage.objects.bulk_create([Advantage(group=group, **item) for item in items])
+    if page.advantage_group_id and not page.advantage_group.pages.exclude(pk=page.pk).exists():
+        if page.advantage_group.name != group_name:
+            page.advantage_group.name = group_name
+            page.advantage_group.save(update_fields=["name"])
+        return page.advantage_group
+
+    source_items = items
+    if page.advantage_group_id:
+        source_items = list(
+            page.advantage_group.advantages.order_by("order", "pk").values(
+                "title",
+                "description",
+                "icon",
+                "order",
+            )
+        )
+
+    group = AdvantageGroup.objects.create(name=group_name)
+    Advantage.objects.bulk_create([Advantage(group=group, **item) for item in source_items])
     return group
 
 

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from io import BytesIO
 from pathlib import Path
+import re
 from typing import Any
 
 from django.core.files.base import ContentFile
@@ -96,6 +97,8 @@ class WebPImageMixin(models.Model):
 class SiteSettings(models.Model):
     phone = models.CharField("Телефон", max_length=32, blank=True)
     email = models.EmailField("Email", blank=True)
+    telegram_username = models.CharField("Telegram username", max_length=128, blank=True)
+    whatsapp_phone = models.CharField("WhatsApp", max_length=32, blank=True)
     application_email = models.EmailField(
         "Email для заявок",
         blank=True,
@@ -120,6 +123,44 @@ class SiteSettings(models.Model):
     def phone_href(self) -> str:
         digits = "".join(char for char in self.phone if char.isdigit())
         return f"tel:+{digits}" if digits else "tel:"
+
+    @property
+    def telegram_handle(self) -> str:
+        username = self.telegram_username.strip().lstrip("@")
+        return f"@{username}" if username else ""
+
+    @property
+    def telegram_url(self) -> str:
+        username = self.telegram_username.strip().lstrip("@")
+        return f"https://t.me/{username}" if username else ""
+
+    @property
+    def whatsapp_url(self) -> str:
+        digits = re.sub(r"\D+", "", self.whatsapp_phone or "")
+        if digits.startswith("8"):
+            digits = f"7{digits[1:]}"
+        elif len(digits) == 10:
+            digits = f"7{digits}"
+        return f"https://wa.me/{digits}" if digits else ""
+
+
+class TelegramSubscriber(models.Model):
+    chat_id = models.CharField("Telegram chat ID", max_length=128, unique=True)
+    username = models.CharField("Username", max_length=255, blank=True)
+    first_name = models.CharField("Имя", max_length=255, blank=True)
+    last_name = models.CharField("Фамилия", max_length=255, blank=True)
+    is_active = models.BooleanField("Активен", default=True)
+    subscribed_at = models.DateTimeField("Подписан", auto_now_add=True)
+    updated_at = models.DateTimeField("Обновлено", auto_now=True)
+
+    class Meta:
+        verbose_name = "Подписчик Telegram"
+        verbose_name_plural = "Подписчики Telegram"
+        ordering = ("-updated_at", "-pk")
+
+    def __str__(self) -> str:
+        label = self.username or " ".join(part for part in (self.first_name, self.last_name) if part).strip()
+        return label or self.chat_id
 
 
 class AdvantageGroup(models.Model):
@@ -193,7 +234,7 @@ class Page(WebPImageMixin):
 
     @property
     def effective_seo_title(self) -> str:
-        return self.seo_title or self.h1
+        return self.seo_title
 
     @property
     def hero_advantages_list(self) -> list[str]:

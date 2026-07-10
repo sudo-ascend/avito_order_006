@@ -25,7 +25,6 @@
         {% endif %}
       </div>
       <a href="#advantages">Преимущества</a>
-      <a href="/#reviews">Отзывы</a>
       <a href="#contact">Контакты</a>
     </nav>
 
@@ -44,22 +43,35 @@
       <span></span>
       <span class="sr-only">Открыть меню</span>
     </button>
-  </div>
 
-  <div class="mobile-menu" id="mobile-menu" hidden>
-    <div class="mobile-menu__inner">
-      <a href="/#services">Услуги</a>
-      {% if nav_pages %}
-        {% for nav_page in nav_pages %}
-          <a href="{{ nav_page.get_absolute_url }}">{{ nav_page.name }}</a>
-        {% endfor %}
-      {% endif %}
-      <a href="#advantages">Преимущества</a>
-      <a href="/#reviews">Отзывы</a>
-      <a href="#contact">Контакты</a>
-      <a class="mobile-menu__phone" href="{{ site_settings.phone|default:'+7 921 947 80 89'|tel_href }}">
-        {{ site_settings.phone|default:"+7 921 947 80 89" }}
-      </a>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="mobile-menu__inner">
+        <div class="mobile-menu__group">
+          <div class="mobile-menu__group-head">
+            <a class="mobile-menu__group-link" href="/#services">Услуги</a>
+            <button
+              class="mobile-menu__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobile-services-menu"
+              aria-label="Показать список услуг"
+              data-mobile-services-toggle
+            ></button>
+          </div>
+          <div class="mobile-menu__submenu" id="mobile-services-menu" hidden>
+            {% if nav_pages %}
+              {% for nav_page in nav_pages %}
+                <a href="{{ nav_page.get_absolute_url }}">{{ nav_page.name }}</a>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+        <a href="#advantages">Преимущества</a>
+        <a href="#contact">Контакты</a>
+        <a class="mobile-menu__phone" href="{{ site_settings.phone|default:'+7 921 947 80 89'|tel_href }}">
+          {{ site_settings.phone|default:"+7 921 947 80 89" }}
+        </a>
+      </div>
     </div>
   </div>
 </header>

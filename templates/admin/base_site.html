@@ -3,6 +3,11 @@
 
 {% block title %}Молния-Клининг | {{ block.super }}{% endblock %}
 
+{% block extrahead %}
+  {{ block.super }}
+  <link rel="icon" href="{% static 'favicon.ico' %}?v=2" sizes="any">
+{% endblock %}
+
 {% block extrastyle %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'admin_custom/admin.css' %}">

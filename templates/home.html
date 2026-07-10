@@ -104,6 +104,18 @@
           <h3>Email</h3>
           <p><a href="mailto:{{ site_settings.email|default:'molniya@profcleaning-comp.ru' }}">{{ site_settings.email|default:"molniya@profcleaning-comp.ru" }}</a></p>
         </article>
+        {% if site_settings.telegram_url %}
+          <article class="advantage-row">
+            <h3>Telegram</h3>
+            <p><a href="{{ site_settings.telegram_url }}" target="_blank" rel="noopener noreferrer">{{ site_settings.telegram_handle }}</a></p>
+          </article>
+        {% endif %}
+        {% if site_settings.whatsapp_url %}
+          <article class="advantage-row">
+            <h3>WhatsApp</h3>
+            <p><a href="{{ site_settings.whatsapp_url }}" target="_blank" rel="noopener noreferrer">{{ site_settings.whatsapp_phone }}</a></p>
+          </article>
+        {% endif %}
         <article class="advantage-row">
           <h3>Адрес</h3>
           <p>{{ site_settings.address|default:"Санкт-Петербург" }}</p>

@@ -8,12 +8,8 @@
   <meta name="description" content="{% block meta_description %}{{ page.seo_description|default:'Профессиональный клининг в Санкт-Петербурге и Ленинградской области.' }}{% endblock %}">
   <link rel="canonical" href="{{ request.build_absolute_uri }}">
   <link rel="sitemap" type="application/xml" href="{% url 'sitemap' %}">
-  {% if site_settings and site_settings.favicon %}
-    <link rel="icon" href="{{ site_settings.favicon.url }}">
-  {% endif %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'favicon.ico' %}?v=2" sizes="any">
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'project/site.css' %}">
   {% block extra_head %}{% endblock %}
@@ -21,7 +17,9 @@
 <body class="{% block body_class %}{{ body_class|default:'page' }}{% endblock %}">
   {% include "includes/header.html" %}
   {% block content %}{% endblock %}
-  {% include "includes/footer.html" %}
+  {% if request.resolver_match.url_name == "home" %}
+    {% include "includes/footer.html" %}
+  {% endif %}
   {% if site_settings and site_settings.metrika_code %}
     {{ site_settings.metrika_code|safe }}
   {% endif %}

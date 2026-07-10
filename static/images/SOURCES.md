@@ -1,6 +1,6 @@
 # Image Sources
 
-- home-hero.webp, windows-hero.webp, gallery-facade-night.webp, gallery-glass-workers.webp: Local source file: assets/images/source/unsplash-window-hero.jpg
+- home-hero.webp, windows-hero.webp, gallery-facade-night.webp, gallery-glass-workers.webp: Local source file: static/images/source/unsplash-window-hero.jpg
 - windows-card.webp: Legacy local archive: avito_order_006-master/mojka-okon-2_1.webp
 - b2b-hero.webp, gallery-b2b.webp, b2b-floor.webp, equipment-floor-machine.webp: Unsplash: https://unsplash.com/photos/kLZs4yoR0uU
 - flood-hero.webp: Unsplash: https://unsplash.com/photos/wRfCMOcbMTw
@@ -19,7 +19,7 @@
 - equipment-vacuum.webp: Unsplash: https://unsplash.com/photos/CVcIMnH_7so
 - equipment-hose.webp: Unsplash: https://unsplash.com/photos/stRWZxXGDnE
 - equipment-chemistry.webp: Unsplash: https://unsplash.com/photos/9gzU1mtTzWM
-- documents-card.webp: Local source file: assets/images/source/unsplash-documents.jpg
+- documents-card.webp: Local source file: static/images/source/unsplash-documents.jpg
 - svc-flood-drying.webp: Cleanfax: practical application of airmovers
 - svc-flood-restore.webp: Operations Army: water-damaged room
 - svc-eq-dehumidifier.webp: Wikimedia Commons: rental dehumidifier

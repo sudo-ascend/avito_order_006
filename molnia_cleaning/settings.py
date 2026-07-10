@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
+    'rest_framework',
     'core',
 ]
 
@@ -121,7 +122,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'assets',
     BASE_DIR / 'static',
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -135,19 +135,16 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_FAILURE_VIEW = 'core.views.csrf_failure'
 
-EMAIL_HOST = os.getenv("EMAIL_HOST", "")
-EMAIL_PORT = int(os.getenv("EMAIL_PORT", "465"))
-EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "")
+EMAIL_HOST = os.getenv("EMAIL_HOST", "smtp.yandex.ru")
+EMAIL_PORT = int(os.getenv("EMAIL_PORT", "587"))
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "grachevilia09@yandex.ru")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
-EMAIL_USE_TLS = env_bool("EMAIL_USE_TLS", False)
-EMAIL_USE_SSL = env_bool("EMAIL_USE_SSL", True)
-DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", EMAIL_HOST_USER or "noreply@molnia-cleaning.local")
-APPLICATION_NOTIFICATION_EMAIL = os.getenv("APPLICATION_NOTIFICATION_EMAIL", "molniya@profcleaning-comp.ru")
-EMAIL_BACKEND = (
-    "django.core.mail.backends.smtp.EmailBackend"
-    if EMAIL_HOST
-    else "django.core.mail.backends.console.EmailBackend"
-)
+EMAIL_USE_TLS = env_bool("EMAIL_USE_TLS", True)
+EMAIL_USE_SSL = env_bool("EMAIL_USE_SSL", False)
+DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", "grachevilia09@yandex.ru")
+SERVER_EMAIL = os.getenv("SERVER_EMAIL", "grachevilia09@yandex.ru")
+APPLICATION_NOTIFICATION_EMAIL = os.getenv("APPLICATION_NOTIFICATION_EMAIL", "grachevilia09@yandex.ru")
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")

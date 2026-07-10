@@ -10,6 +10,16 @@
       <a class="contact-line" href="mailto:{{ site_settings.email|default:'molniya@profcleaning-comp.ru' }}">
         {% render_icon "message" %} {{ site_settings.email|default:"molniya@profcleaning-comp.ru" }}
       </a>
+      {% if site_settings.telegram_url %}
+        <a class="contact-line" href="{{ site_settings.telegram_url }}" target="_blank" rel="noopener noreferrer">
+          {% render_icon "telegram" %} {{ site_settings.telegram_handle }}
+        </a>
+      {% endif %}
+      {% if site_settings.whatsapp_url %}
+        <a class="contact-line" href="{{ site_settings.whatsapp_url }}" target="_blank" rel="noopener noreferrer">
+          {% render_icon "whatsapp" %} WhatsApp: {{ site_settings.whatsapp_phone }}
+        </a>
+      {% endif %}
       <span class="contact-line">
         {% render_icon "home" %} {{ site_settings.address|default:"194017, г. Санкт-Петербург, пр-т Энгельса, д. 54" }}
       </span>
@@ -18,18 +28,20 @@
       </span>
     </div>
 
-    <form class="request-form" method="post" enctype="multipart/form-data" novalidate>
+    <form
+      class="request-form"
+      method="post"
+      action="{% url 'application_create_api' page.slug %}"
+      data-application-form
+      data-application-endpoint="{% url 'application_create_api' page.slug %}"
+      novalidate
+    >
       {% csrf_token %}
+      {{ form.website }}
       <h2>Оставьте заявку</h2>
       <p>Мы перезвоним вам в течение 15 минут и подскажем, какая бригада подойдет под задачу.</p>
 
-      {% if messages %}
-        <div class="status-list">
-          {% for message in messages %}
-            <p class="status-list__item status-list__item--{{ message.tags|default:'info' }}">{{ message }}</p>
-          {% endfor %}
-        </div>
-      {% endif %}
+      <div class="status-list" data-form-status hidden></div>
 
       {% if form.non_field_errors %}
         <div class="status-list">
@@ -76,15 +88,54 @@
         {% endfor %}
       </label>
 
+      <label class="check-line check-line--consent">
+        {{ form.consent }}
+        <span>
+          {{ form.consent.label }}
+          {% if site_settings.policy_text %}
+            <span class="request-form__policy-note">Политика обработки персональных данных размещена внизу сайта.</span>
+          {% endif %}
+        </span>
+      </label>
+      {% for error in form.consent.errors %}
+        <small class="field-error">{{ error }}</small>
+      {% endfor %}
+
       <button class="btn btn--primary" type="submit">{{ page.cta_primary_text }} <span aria-hidden="true">→</span></button>
     </form>
 
-    <div class="contact-card contact-card--bullets">
+    <div class="contact-card contact-card--bullets" data-responsive-contact-bullets>
       <div>{% render_icon "clock" %}<span>Работаем без выходных и праздников</span></div>
       <div>{% render_icon "truck" %}<span>Срочный выезд по Санкт-Петербургу и области</span></div>
       <div>{% render_icon "calculator" %}<span>Прозрачный расчет стоимости до начала работ</span></div>
       <div>{% render_icon "shield" %}<span>Работаем по договору и акту выполненных работ</span></div>
       <div>{% render_icon "user-check" %}<span>Опытные клинеры и профильные специалисты</span></div>
+    </div>
+  </div>
+
+  <div class="success-popup" data-success-popup hidden>
+    <div
+      class="success-popup__dialog"
+      data-success-popup-dialog
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="application-success-title"
+      tabindex="-1"
+    >
+      <button class="success-popup__close" type="button" aria-label="Закрыть окно" data-success-popup-close>
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="success-popup__badge">
+        {% render_icon "check" %}
+      </div>
+      <p class="success-popup__eyebrow">Заявка отправлена</p>
+      <h3 id="application-success-title">Мы скоро свяжемся с вами</h3>
+      <p class="success-popup__message" data-success-popup-message>
+        Наш специалист свяжется с вами в ближайшее время, чтобы уточнить детали и согласовать выезд.
+      </p>
+      <button class="btn btn--primary success-popup__action" type="button" data-success-popup-close>
+        Понятно
+      </button>
     </div>
   </div>
 </section>

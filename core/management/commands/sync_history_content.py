@@ -13,6 +13,8 @@ ASSETS_DIR = Path(__file__).resolve().parents[3] / "assets" / "images"
 
 SITE_SETTINGS_DEFAULTS = {
     "phone": "+7 921 947 80 89",
+    "telegram_username": "FoodMood2024",
+    "whatsapp_phone": "89669318089",
     "email": "molniya@profcleaning-comp.ru",
     "address": "194017, г. Санкт-Петербург, пр-т Энгельса, д. 54",
     "work_time": "Работаем 24/7",
