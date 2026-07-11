@@ -1,10 +1,14 @@
 import json
-from unittest.mock import patch
+import sys
+from unittest.mock import ANY, Mock, patch
 
 from django.core import mail
-from django.test import Client, TestCase, override_settings
+from django.core.management import call_command
+from django.core.management.base import CommandError
+from django.test import Client, SimpleTestCase, TestCase, override_settings
 from django.urls import reverse
 
+from core.management.commands.runserver import Command as RunserverCommand
 from core.models import AdvantageGroup, Application, Page, Service, SiteSettings, TelegramSubscriber
 from core.utils import notify_application
 
@@ -351,3 +355,81 @@ class TelegramWebhookTests(BaseSiteTestCase):
             "Вы отписались от уведомлений о новых заявках.",
             "123456",
         )
+
+
+class TelegramBotCommandTests(TestCase):
+    @override_settings(TELEGRAM_BOT_TOKEN="")
+    def test_run_telegram_bot_requires_token(self):
+        with self.assertRaisesMessage(CommandError, "TELEGRAM_BOT_TOKEN is not configured."):
+            call_command("run_telegram_bot")
+
+    @override_settings(TELEGRAM_BOT_TOKEN="test-bot-token")
+    @patch("core.management.commands.run_telegram_bot.asyncio.run")
+    @patch("core.management.commands.run_telegram_bot.run_bot", new_callable=Mock)
+    def test_run_telegram_bot_starts_aiogram_runner(self, run_bot_mock, asyncio_run_mock):
+        run_bot_mock.return_value = object()
+
+        call_command("run_telegram_bot", "--drop-pending-updates")
+
+        run_bot_mock.assert_called_once_with(drop_pending_updates=True)
+        asyncio_run_mock.assert_called_once_with(run_bot_mock.return_value)
+
+
+class RunserverTelegramBotTests(SimpleTestCase):
+    @override_settings(TELEGRAM_BOT_TOKEN="")
+    @patch("core.management.commands.runserver.subprocess.Popen")
+    def test_runserver_does_not_start_bot_without_token(self, popen_mock):
+        command = RunserverCommand()
+
+        process = command.start_telegram_bot(
+            {
+                "skip_telegram_bot": False,
+                "telegram_drop_pending_updates": False,
+                "use_reloader": False,
+            }
+        )
+
+        self.assertIsNone(process)
+        popen_mock.assert_not_called()
+
+    @override_settings(TELEGRAM_BOT_TOKEN="test-bot-token")
+    @patch.dict("os.environ", {"RUN_MAIN": "true"}, clear=False)
+    @patch("core.management.commands.runserver.subprocess.Popen")
+    def test_runserver_starts_bot_process(self, popen_mock):
+        command = RunserverCommand()
+
+        process = command.start_telegram_bot(
+            {
+                "skip_telegram_bot": False,
+                "telegram_drop_pending_updates": True,
+                "use_reloader": True,
+            }
+        )
+
+        self.assertIs(process, popen_mock.return_value)
+        popen_mock.assert_called_once_with(
+            [sys.executable, "manage.py", "run_telegram_bot", "--drop-pending-updates"],
+            cwd=ANY,
+            creationflags=ANY,
+        )
+
+    @patch.object(RunserverCommand, "start_telegram_bot")
+    @patch.object(RunserverCommand, "stop_telegram_bot")
+    @patch("core.management.commands.runserver.StaticfilesRunserverCommand.inner_run", side_effect=RuntimeError("boom"))
+    def test_runserver_stops_bot_when_server_exits(self, inner_run_mock, stop_bot_mock, start_bot_mock):
+        command = RunserverCommand()
+        bot_process = Mock()
+        start_bot_mock.return_value = bot_process
+
+        with self.assertRaisesMessage(RuntimeError, "boom"):
+            command.inner_run(use_reloader=False, skip_telegram_bot=False, telegram_drop_pending_updates=False)
+
+        start_bot_mock.assert_called_once_with(
+            {
+                "use_reloader": False,
+                "skip_telegram_bot": False,
+                "telegram_drop_pending_updates": False,
+            }
+        )
+        inner_run_mock.assert_called_once()
+        stop_bot_mock.assert_called_once_with(bot_process)
