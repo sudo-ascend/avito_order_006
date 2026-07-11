@@ -45,7 +45,7 @@
         {% for service_page in pages %}
           <article class="service-card">
             {% if service_page.hero_image %}
-              <div class="service-card__media service-card__media--shape">
+              <div class="service-card__media service-card__media--home">
                 <img
                   src="{{ service_page.hero_image.url }}"
                   alt="{{ service_page.hero_image_alt|default:service_page.name }}"

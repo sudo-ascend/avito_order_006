@@ -144,10 +144,10 @@ def upsert_telegram_subscriber(chat_data: dict, *, is_active: bool) -> TelegramS
     return subscriber
 
 
-def send_telegram_notification_to_subscribers(text: str, fallback_chat_id: str | None = None) -> bool:
+def send_telegram_notification_to_subscribers(text: str) -> bool:
     subscribers = list(TelegramSubscriber.objects.filter(is_active=True).values_list("chat_id", flat=True))
     if not subscribers:
-        return send_telegram_message(text, fallback_chat_id) if fallback_chat_id else False
+        return False
 
     delivered = False
     for subscriber_chat_id in subscribers:
@@ -160,7 +160,6 @@ def send_telegram_notification_to_subscribers(text: str, fallback_chat_id: str |
 
 def notify_application(form, site_settings=None) -> dict[str, bool]:
     recipient_email = getattr(site_settings, "application_email", "") or settings.APPLICATION_NOTIFICATION_EMAIL
-    chat_id = getattr(site_settings, "telegram_chat_id", "") or settings.TELEGRAM_CHAT_ID
 
     result = {"email": False, "telegram": False}
 
@@ -172,7 +171,7 @@ def notify_application(form, site_settings=None) -> dict[str, bool]:
         logger.exception("Не удалось отправить email по заявке %s", form.pk)
 
     try:
-        result["telegram"] = send_telegram_notification_to_subscribers(build_application_telegram_message(form), chat_id)
+        result["telegram"] = send_telegram_notification_to_subscribers(build_application_telegram_message(form))
     except Exception:
         logger.exception("Не удалось отправить Telegram по заявке %s", form.pk)
 

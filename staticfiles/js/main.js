@@ -311,6 +311,13 @@
     renderStatus(form, summary, "error");
   }
 
+  function setSubmitButtonLoadingState(button, isLoading) {
+    if (!button) return;
+    button.disabled = isLoading;
+    button.classList.toggle("is-loading", isLoading);
+    button.setAttribute("aria-busy", String(isLoading));
+  }
+
   document.querySelectorAll('input[name="phone"]').forEach((input) => {
     input.addEventListener("focus", () => {
       if (!input.value.trim()) input.value = "+7 ";
@@ -359,7 +366,7 @@
       renderStatus(form, [], "info");
 
       const submitButton = form.querySelector('button[type="submit"]');
-      if (submitButton) submitButton.disabled = true;
+      setSubmitButtonLoadingState(submitButton, true);
 
       try {
         const response = await fetch(form.dataset.applicationEndpoint || form.action, {
@@ -387,7 +394,7 @@
       } catch (error) {
         renderStatus(form, "Не удалось отправить заявку. Попробуйте еще раз.", "error");
       } finally {
-        if (submitButton) submitButton.disabled = false;
+        setSubmitButtonLoadingState(submitButton, false);
       }
     });
   });

@@ -454,6 +454,7 @@ input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   min-height: 52px;
   padding: 14px 26px;
   border: 1px solid transparent;
@@ -466,6 +467,11 @@ input {
 
 .btn:hover {
   transform: translateY(-1px);
+}
+
+.btn:disabled,
+.btn.is-loading {
+  transform: none;
 }
 
 .btn--primary {
@@ -709,12 +715,12 @@ input {
   background: #e7eef5;
 }
 
-.service-card__media--shape {
-  width: calc(100% - 46px);
-  height: 150px;
-  margin: 0 auto;
-  transform: translateY(-12px);
-  clip-path: polygon(0 22%, 42% 0, 100% 20%, 86% 100%, 9% 86%);
+.service-card__media--home {
+  width: 100%;
+  height: 185px;
+  margin: 0;
+  transform: none;
+  clip-path: none;
 }
 
 .service-card__media img {
@@ -795,7 +801,7 @@ input {
 }
 
 .card-link span,
-.btn span {
+.btn__icon {
   display: inline-grid;
   width: 24px;
   height: 24px;
@@ -803,6 +809,39 @@ input {
   place-items: center;
   border-radius: 50%;
   background: rgba(16, 34, 68, 0.14);
+}
+
+.btn__label {
+  white-space: nowrap;
+}
+
+.btn__spinner {
+  display: none;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border: 2px solid rgba(16, 34, 68, 0.24);
+  border-top-color: #102244;
+  border-radius: 50%;
+  animation: button-spinner 0.7s linear infinite;
+}
+
+.btn.is-loading {
+  cursor: wait;
+}
+
+.btn.is-loading .btn__icon {
+  display: none;
+}
+
+.btn.is-loading .btn__spinner {
+  display: inline-block;
+}
+
+@keyframes button-spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .home-advantages {

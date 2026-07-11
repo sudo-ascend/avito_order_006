@@ -101,7 +101,11 @@
         <small class="field-error">{{ error }}</small>
       {% endfor %}
 
-      <button class="btn btn--primary" type="submit">{{ page.cta_primary_text }} <span aria-hidden="true">→</span></button>
+      <button class="btn btn--primary" type="submit">
+        <span class="btn__label">{{ page.cta_primary_text }}</span>
+        <span class="btn__icon" aria-hidden="true">→</span>
+        <span class="btn__spinner" aria-hidden="true"></span>
+      </button>
     </form>
 
     <div class="contact-card contact-card--bullets" data-responsive-contact-bullets>

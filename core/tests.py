@@ -209,10 +209,10 @@ class NotificationTests(BaseSiteTestCase):
 
     @override_settings(
         TELEGRAM_BOT_TOKEN="test-bot-token",
-        TELEGRAM_CHAT_ID="123456",
     )
     @patch("core.utils.requests.post")
     def test_notify_application_sends_html_telegram_message_with_copyable_phone(self, requests_post_mock):
+        TelegramSubscriber.objects.create(chat_id="123456", username="single", is_active=True)
         page = Page.objects.create(
             slug="test-telegram-page",
             name="Тестовая страница",
@@ -254,7 +254,6 @@ class NotificationTests(BaseSiteTestCase):
 
     @override_settings(
         TELEGRAM_BOT_TOKEN="test-bot-token",
-        TELEGRAM_CHAT_ID="legacy-chat-id",
     )
     @patch("core.utils.requests.post")
     def test_notify_application_sends_to_all_active_telegram_subscribers(self, requests_post_mock):
