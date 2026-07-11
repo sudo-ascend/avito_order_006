@@ -209,3 +209,6 @@ class TelegramSubscriberAdmin(admin.ModelAdmin):
     list_filter = ("is_active", "subscribed_at", "updated_at")
     search_fields = ("chat_id", "username", "first_name", "last_name")
     readonly_fields = ("chat_id", "username", "first_name", "last_name", "subscribed_at", "updated_at")
+
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        return False

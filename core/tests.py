@@ -2,12 +2,14 @@ import json
 import sys
 from unittest.mock import ANY, Mock, patch
 
+from django.contrib.admin.sites import AdminSite
 from django.core import mail
 from django.core.management import call_command
 from django.core.management.base import CommandError
-from django.test import Client, SimpleTestCase, TestCase, override_settings
+from django.test import Client, RequestFactory, SimpleTestCase, TestCase, override_settings
 from django.urls import reverse
 
+from core.admin import TelegramSubscriberAdmin
 from core.management.commands.runserver import Command as RunserverCommand
 from core.models import AdvantageGroup, Application, Page, Service, SiteSettings, TelegramSubscriber
 from core.utils import notify_application
@@ -373,6 +375,14 @@ class TelegramBotCommandTests(TestCase):
 
         run_bot_mock.assert_called_once_with(drop_pending_updates=True)
         asyncio_run_mock.assert_called_once_with(run_bot_mock.return_value)
+
+
+class TelegramSubscriberAdminTests(SimpleTestCase):
+    def test_has_add_permission_is_disabled(self):
+        admin_instance = TelegramSubscriberAdmin(TelegramSubscriber, AdminSite())
+        request = RequestFactory().get("/admin/core/telegramsubscriber/")
+
+        self.assertFalse(admin_instance.has_add_permission(request))
 
 
 class RunserverTelegramBotTests(SimpleTestCase):
