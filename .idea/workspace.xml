@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b423b32-fdaf-461b-9f7f-63dc72d05af2" name="Changes" comment="tg bot fix 01">
+    <list default="true" id="8b423b32-fdaf-461b-9f7f-63dc72d05af2" name="Changes" comment="tg bot fix 02">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram_bot/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_bot/handlers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783799976071</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="tg bot fix 02">
+      <option name="closed" value="true" />
+      <created>1783801027978</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1783801027978</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +157,7 @@
     <MESSAGE value="fix 03" />
     <MESSAGE value="fix 04" />
     <MESSAGE value="tg bot fix 01" />
-    <option name="LAST_COMMIT_MESSAGE" value="tg bot fix 01" />
+    <MESSAGE value="tg bot fix 02" />
+    <option name="LAST_COMMIT_MESSAGE" value="tg bot fix 02" />
   </component>
 </project>
