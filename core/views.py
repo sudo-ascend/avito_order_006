@@ -8,7 +8,7 @@ from django.urls import reverse
 
 from core.default_pages import ensure_default_page, ensure_default_pages
 from core.forms import ApplicationForm
-from core.models import Page
+from core.models import HomePageSettings, Page
 
 
 def get_page_template(slug: str) -> str:
@@ -22,17 +22,21 @@ def get_page_template(slug: str) -> str:
 
 def home(request):
     ensure_default_pages()
+    home_settings, _ = HomePageSettings.objects.get_or_create()
     pages = Page.objects.filter(is_active=True).only(
         "slug",
         "name",
         "subtitle",
         "hero_image",
         "hero_image_alt",
+        "home_card_image",
+        "home_card_image_alt",
     ).order_by("pk")
     return render(
         request,
         "home.html",
         {
+            "home_settings": home_settings,
             "pages": pages,
             "body_class": "page page--home",
         },

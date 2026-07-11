@@ -60,6 +60,14 @@ def hero_image_upload_to(instance: "Page", filename: str) -> str:
     return f"pages/{instance.slug}/hero/{Path(filename).name}"
 
 
+def home_hero_image_upload_to(instance: "HomePageSettings", filename: str) -> str:
+    return f"home/hero/{Path(filename).name}"
+
+
+def home_card_image_upload_to(instance: "Page", filename: str) -> str:
+    return f"pages/{instance.slug}/home-card/{Path(filename).name}"
+
+
 def service_image_upload_to(instance: "Service", filename: str) -> str:
     return f"pages/{instance.page.slug}/services/{Path(filename).name}"
 
@@ -144,6 +152,76 @@ class SiteSettings(models.Model):
         return f"https://wa.me/{digits}" if digits else ""
 
 
+class HomePageSettings(WebPImageMixin):
+    seo_title = models.CharField("SEO title главной", max_length=255, blank=True)
+    seo_description = models.TextField("SEO description главной", blank=True)
+    hero_image = models.ImageField("Hero-изображение главной", upload_to=home_hero_image_upload_to, blank=True, null=True)
+    hero_image_alt = models.CharField("Alt hero-изображения главной", max_length=255, blank=True)
+    hero_title = models.CharField(
+        "Заголовок hero",
+        max_length=255,
+        default="Профессиональный клининг для сложных объектов",
+    )
+    hero_text = models.TextField(
+        "Текст hero",
+        blank=True,
+        default=(
+            "Берём на себя аварийную уборку, очистку после пожара и потопа, B2B-клининг, "
+            "мойку окон и фасадов, а также специализированные работы по восстановлению помещений."
+        ),
+    )
+    hero_primary_text = models.CharField("Текст основной кнопки hero", max_length=120, default="Связаться с нами")
+    hero_primary_link = models.CharField("Ссылка основной кнопки hero", max_length=255, default="#contact")
+    hero_secondary_text = models.CharField("Текст второй кнопки hero", max_length=120, default="Смотреть услуги")
+    hero_secondary_link = models.CharField("Ссылка второй кнопки hero", max_length=255, default="#services")
+    hero_panel_items = models.TextField(
+        "Пункты правой карточки hero",
+        blank=True,
+        default="Работаем 24/7\nВыезд по Санкт-Петербургу и области\nПолный цикл: от очистки до восстановления",
+    )
+    services_section_title = models.CharField("Заголовок секции направлений", max_length=255, default="Основные направления")
+    advantages_section_title = models.CharField(
+        "Заголовок секции преимуществ",
+        max_length=255,
+        default="Работаем аккуратно, быстро и без лишней бюрократии",
+    )
+    advantage_group = models.ForeignKey(
+        "AdvantageGroup",
+        on_delete=models.SET_NULL,
+        related_name="home_pages",
+        blank=True,
+        null=True,
+        verbose_name="Группа преимуществ главной",
+    )
+    contact_section_title = models.CharField("Заголовок секции контактов", max_length=255, default="Контакты")
+    contact_phone_label = models.CharField("Подпись телефона", max_length=120, default="Телефон")
+    contact_email_label = models.CharField("Подпись email", max_length=120, default="Email")
+    contact_telegram_label = models.CharField("Подпись Telegram", max_length=120, default="Telegram")
+    contact_whatsapp_label = models.CharField("Подпись WhatsApp", max_length=120, default="WhatsApp")
+    contact_address_label = models.CharField("Подпись адреса", max_length=120, default="Адрес")
+    contact_work_time_label = models.CharField("Подпись режима работы", max_length=120, default="Режим работы")
+    updated_at = models.DateTimeField("Обновлено", auto_now=True)
+
+    image_fields = ("hero_image",)
+
+    class Meta:
+        verbose_name = "Главная страница"
+        verbose_name_plural = "Главная страница"
+
+    def __str__(self) -> str:
+        return "Главная страница"
+
+    @property
+    def hero_panel_items_list(self) -> list[str]:
+        return parse_text_items(self.hero_panel_items)
+
+    @property
+    def advantages(self):
+        if self.advantage_group_id:
+            return self.advantage_group.advantages.all()
+        return Advantage.objects.none()
+
+
 class TelegramSubscriber(models.Model):
     chat_id = models.CharField("Telegram chat ID", max_length=128, unique=True)
     username = models.CharField("Username", max_length=255, blank=True)
@@ -185,6 +263,13 @@ class Page(WebPImageMixin):
     seo_description = models.TextField("SEO description", blank=True)
     hero_image = models.ImageField("Hero-изображение", upload_to=hero_image_upload_to, blank=True, null=True)
     hero_image_alt = models.CharField("Alt hero-изображения", max_length=255, blank=True)
+    home_card_image = models.ImageField(
+        "Изображение карточки на главной",
+        upload_to=home_card_image_upload_to,
+        blank=True,
+        null=True,
+    )
+    home_card_image_alt = models.CharField("Alt изображения карточки на главной", max_length=255, blank=True)
     hero_advantages = models.TextField("Преимущества в hero", blank=True)
     right_card_items = models.JSONField("Пункты правой карточки", blank=True, default=list)
     cta_primary_text = models.CharField("Текст основной кнопки", max_length=120, default="Вызвать бригаду")
@@ -219,7 +304,7 @@ class Page(WebPImageMixin):
     is_active = models.BooleanField("Страница активна", default=True)
     updated_at = models.DateTimeField("Обновлено", auto_now=True)
 
-    image_fields = ("hero_image",)
+    image_fields = ("hero_image", "home_card_image")
 
     class Meta:
         verbose_name = "Страница"
@@ -231,6 +316,14 @@ class Page(WebPImageMixin):
 
     def get_absolute_url(self) -> str:
         return reverse("page_detail", kwargs={"slug": self.slug})
+
+    @property
+    def home_display_image(self):
+        return self.home_card_image or self.hero_image
+
+    @property
+    def home_display_image_alt(self) -> str:
+        return self.home_card_image_alt or self.hero_image_alt or self.name
 
     @property
     def effective_seo_title(self) -> str:

@@ -9,6 +9,7 @@ from core.models import (
     AdvantageGroup,
     Application,
     Equipment,
+    HomePageSettings,
     Page,
     Service,
     SiteSettings,
@@ -67,6 +68,8 @@ class PageAdmin(admin.ModelAdmin):
                 "fields": (
                     "hero_image",
                     "hero_image_alt",
+                    "home_card_image",
+                    "home_card_image_alt",
                     "hero_advantages",
                     "right_card_items",
                     "cta_primary_text",
@@ -125,6 +128,55 @@ class SiteSettingsAdmin(SingletonAdmin):
         ("Брендинг", {"fields": ("logo", "favicon")}),
         ("Интеграции", {"fields": ("metrika_code",)}),
         ("Дополнительно", {"fields": ("policy_text",)}),
+    )
+
+
+@admin.register(HomePageSettings)
+class HomePageSettingsAdmin(SingletonAdmin):
+    readonly_fields = ("updated_at",)
+    fieldsets = (
+        ("SEO", {"fields": ("seo_title", "seo_description")}),
+        (
+            "Hero",
+            {
+                "fields": (
+                    "hero_image",
+                    "hero_image_alt",
+                    "hero_title",
+                    "hero_text",
+                    "hero_primary_text",
+                    "hero_primary_link",
+                    "hero_secondary_text",
+                    "hero_secondary_link",
+                    "hero_panel_items",
+                )
+            },
+        ),
+        (
+            "Секции",
+            {
+                "fields": (
+                    "services_section_title",
+                    "advantages_section_title",
+                    "advantage_group",
+                    "contact_section_title",
+                )
+            },
+        ),
+        (
+            "Подписи контактов",
+            {
+                "fields": (
+                    "contact_phone_label",
+                    "contact_email_label",
+                    "contact_telegram_label",
+                    "contact_whatsapp_label",
+                    "contact_address_label",
+                    "contact_work_time_label",
+                )
+            },
+        ),
+        ("Служебное", {"fields": ("updated_at",)}),
     )
 
 

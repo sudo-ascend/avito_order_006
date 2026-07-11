@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Молния-Клининг{% endblock %}
-{% block meta_description %}Профессиональный клининг в Санкт-Петербурге: аварийная уборка, B2B-клининг, мойка окон и фасадов, сложные технические работы.{% endblock %}
+{% block title %}{{ home_settings.seo_title|default:"Молния-Клининг" }}{% endblock %}
+{% block meta_description %}{{ home_settings.seo_description|default:"Профессиональный клининг в Санкт-Петербурге: аварийная уборка, B2B-клининг, мойка окон и фасадов, сложные технические работы." }}{% endblock %}
 
 {% block content %}
 <main>
@@ -11,26 +11,23 @@
       <div class="home-hero__card">
         <img
           class="home-hero__image"
-          src="{% static 'images/home-hero.webp' %}"
-          alt="Промышленная мойка окон и фасадов"
+          src="{% if home_settings.hero_image %}{{ home_settings.hero_image.url }}{% else %}{% static 'images/home-hero.webp' %}{% endif %}"
+          alt="{{ home_settings.hero_image_alt|default:'Промышленная мойка окон и фасадов' }}"
           width="1500"
           height="760"
         >
         <div class="home-hero__content">
-          <h1>Профессиональный клининг для сложных объектов</h1>
-          <p>
-            Берём на себя аварийную уборку, очистку после пожара и потопа, B2B-клининг,
-            мойку окон и фасадов, а также специализированные работы по восстановлению помещений.
-          </p>
+          <h1>{{ home_settings.hero_title }}</h1>
+          <p>{{ home_settings.hero_text }}</p>
           <div class="button-row">
-            <a class="btn btn--primary" href="#contact">Связаться с нами</a>
-            <a class="btn btn--ghost" href="#services">Смотреть услуги</a>
+            <a class="btn btn--primary" href="{{ home_settings.hero_primary_link }}">{{ home_settings.hero_primary_text }}</a>
+            <a class="btn btn--ghost" href="{{ home_settings.hero_secondary_link }}">{{ home_settings.hero_secondary_text }}</a>
           </div>
         </div>
         <aside class="home-hero__panel" aria-label="Ключевые преимущества">
-          <div><span>Работаем 24/7</span></div>
-          <div><span>Выезд по Санкт-Петербургу и области</span></div>
-          <div><span>Полный цикл: от очистки до восстановления</span></div>
+          {% for item in home_settings.hero_panel_items_list %}
+            <div><span>{{ item }}</span></div>
+          {% endfor %}
         </aside>
       </div>
     </div>
@@ -39,16 +36,16 @@
   <section class="section services-section" id="services">
     <div class="container">
       <div class="section-title">
-        <h2>Основные направления</h2>
+        <h2>{{ home_settings.services_section_title }}</h2>
       </div>
       <div class="service-card-grid service-card-grid--home">
         {% for service_page in pages %}
           <article class="service-card">
-            {% if service_page.hero_image %}
+            {% if service_page.home_display_image %}
               <div class="service-card__media service-card__media--home">
                 <img
-                  src="{{ service_page.hero_image.url }}"
-                  alt="{{ service_page.hero_image_alt|default:service_page.name }}"
+                  src="{{ service_page.home_display_image.url }}"
+                  alt="{{ service_page.home_display_image_alt }}"
                   loading="lazy"
                 >
               </div>
@@ -67,25 +64,32 @@
   <section class="section home-advantages" id="advantages">
     <div class="container">
       <div class="home-advantages__lead">
-        <h2>Работаем аккуратно, быстро и без лишней бюрократии</h2>
+        <h2>{{ home_settings.advantages_section_title }}</h2>
       </div>
       <div class="advantage-list">
-        <article class="advantage-row">
-          <h3>Срочный выезд</h3>
-          <p>Оперативно подключаем бригаду и подбираем нужное оборудование под задачу.</p>
-        </article>
-        <article class="advantage-row">
-          <h3>Профильные работы</h3>
-          <p>Закрываем как бытовые, так и технически сложные объекты с нестандартными загрязнениями.</p>
-        </article>
-        <article class="advantage-row">
-          <h3>Прозрачная смета</h3>
-          <p>До начала работ фиксируем объём, этапы и ожидаемый результат.</p>
-        </article>
-        <article class="advantage-row">
-          <h3>Один подрядчик</h3>
-          <p>Не нужно собирать отдельных исполнителей на уборку, мойку, сушку и восстановление.</p>
-        </article>
+        {% for advantage in home_settings.advantages %}
+          <article class="advantage-row">
+            <h3>{{ advantage.title }}</h3>
+            <p>{{ advantage.description }}</p>
+          </article>
+        {% empty %}
+          <article class="advantage-row">
+            <h3>Срочный выезд</h3>
+            <p>Оперативно подключаем бригаду и подбираем нужное оборудование под задачу.</p>
+          </article>
+          <article class="advantage-row">
+            <h3>Профильные работы</h3>
+            <p>Закрываем как бытовые, так и технически сложные объекты с нестандартными загрязнениями.</p>
+          </article>
+          <article class="advantage-row">
+            <h3>Прозрачная смета</h3>
+            <p>До начала работ фиксируем объём, этапы и ожидаемый результат.</p>
+          </article>
+          <article class="advantage-row">
+            <h3>Один подрядчик</h3>
+            <p>Не нужно собирать отдельных исполнителей на уборку, мойку, сушку и восстановление.</p>
+          </article>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -93,35 +97,35 @@
   <section class="section" id="contact">
     <div class="container">
       <div class="section-title">
-        <h2>Контакты</h2>
+        <h2>{{ home_settings.contact_section_title }}</h2>
       </div>
       <div class="advantage-list">
         <article class="advantage-row">
-          <h3>Телефон</h3>
+          <h3>{{ home_settings.contact_phone_label }}</h3>
           <p><a href="{{ site_settings.phone_href|default:'tel:+79219478089' }}">{{ site_settings.phone|default:"+7 921 947 80 89" }}</a></p>
         </article>
         <article class="advantage-row">
-          <h3>Email</h3>
+          <h3>{{ home_settings.contact_email_label }}</h3>
           <p><a href="mailto:{{ site_settings.email|default:'molniya@profcleaning-comp.ru' }}">{{ site_settings.email|default:"molniya@profcleaning-comp.ru" }}</a></p>
         </article>
         {% if site_settings.telegram_url %}
           <article class="advantage-row">
-            <h3>Telegram</h3>
+            <h3>{{ home_settings.contact_telegram_label }}</h3>
             <p><a href="{{ site_settings.telegram_url }}" target="_blank" rel="noopener noreferrer">{{ site_settings.telegram_handle }}</a></p>
           </article>
         {% endif %}
         {% if site_settings.whatsapp_url %}
           <article class="advantage-row">
-            <h3>WhatsApp</h3>
+            <h3>{{ home_settings.contact_whatsapp_label }}</h3>
             <p><a href="{{ site_settings.whatsapp_url }}" target="_blank" rel="noopener noreferrer">{{ site_settings.whatsapp_phone }}</a></p>
           </article>
         {% endif %}
         <article class="advantage-row">
-          <h3>Адрес</h3>
+          <h3>{{ home_settings.contact_address_label }}</h3>
           <p>{{ site_settings.address|default:"Санкт-Петербург" }}</p>
         </article>
         <article class="advantage-row">
-          <h3>Режим работы</h3>
+          <h3>{{ home_settings.contact_work_time_label }}</h3>
           <p>{{ site_settings.work_time|default:"Работаем 24/7" }}</p>
         </article>
       </div>
